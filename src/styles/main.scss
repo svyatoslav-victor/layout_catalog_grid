@@ -10,5 +10,34 @@ body {
   box-sizing: border-box;
 }
 
+.catalog {
+  display: grid;
+  grid-auto-flow: row;
+  column-gap: 48px;
+}
+
+.catalog__card {
+  display: grid;
+  justify-self: center;
+}
+
+@media screen and (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @import "_header.scss";
 @import "_catalog.scss";
